@@ -23,7 +23,7 @@ Esta colección incluye todas las peticiones necesarias para interactuar con el 
 ## Instrucciones para Ejecutar
 1. Clona el repositorio.
    ```bash
-   git clone <[repo](https://github.com/davidc-garcia/ArquiSoft-Laboratorio-1.git)>
+   git clone https://github.com/davidc-garcia/ArquiSoft-Laboratorio-1.git
 2. Navega a la carpeta del proyecto e inicia la aplicación.
 3. Abre el navegador y ve a la consola de H2 en la dirección localhost:8080/h2-console.
 4. Importa la colección de Postman en Postman para realizar las pruebas en el API.
