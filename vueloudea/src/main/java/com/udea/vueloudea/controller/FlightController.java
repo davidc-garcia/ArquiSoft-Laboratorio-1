@@ -21,8 +21,9 @@ public class FlightController {
                                       @RequestParam(value= "origin", required = false) String origin,
                                       @RequestParam(value= "destination", required = false) String destination,
                                       @RequestParam(value= "maxPrice", required = false) Double maxPrice,
-                                      @RequestParam(value= "flightType", required = false) String flightType  // Nuevo
+                                      @RequestParam(value= "flightType", required = false) String flightType,
+                                      @RequestParam(value= "airplaneType", required = false) String airplaneType  // Nuevo
     ){
-        return flightService.findFlights(LocalDate.parse(startDate), LocalDate.parse(endDate), origin, destination, maxPrice, flightType);
+        return flightService.findFlights(LocalDate.parse(startDate), LocalDate.parse(endDate), origin, destination, maxPrice, flightType, airplaneType);
     }
 }

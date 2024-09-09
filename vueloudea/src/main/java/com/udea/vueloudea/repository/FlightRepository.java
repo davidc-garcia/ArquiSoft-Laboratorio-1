@@ -53,6 +53,54 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
     List<Flight> findByDepartureDateBetweenAndPriceLessThanEqual(
             LocalDate startDate, LocalDate endDate, Double maxPrice);
 
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndDestinationContainingIgnoreCaseAndPriceLessThanEqualAndFlightTypeAndAirplaneType(
+        LocalDate startDate, LocalDate endDate, String origin, String destination, Double maxPrice, String flightType, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndDestinationContainingIgnoreCaseAndFlightTypeAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String origin, String destination, String flightType, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndPriceLessThanEqualAndFlightTypeAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String origin, Double maxPrice, String flightType, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndDestinationContainingIgnoreCaseAndPriceLessThanEqualAndFlightTypeAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String destination, Double maxPrice, String flightType, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndFlightTypeAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String origin, String flightType, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndDestinationContainingIgnoreCaseAndFlightTypeAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String destination, String flightType, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndPriceLessThanEqualAndFlightTypeAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, Double maxPrice, String flightType, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndFlightTypeAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String flightType, String airplaneType);
+    
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndDestinationContainingIgnoreCaseAndPriceLessThanEqualAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String origin, String destination, Double maxPrice, String airplaneType);
+        
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndDestinationContainingIgnoreCaseAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String origin, String destination, String airplaneType);
+    
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndPriceLessThanEqualAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String origin, Double maxPrice, String airplaneType);
+    
+        List<Flight> findByDepartureDateBetweenAndDestinationContainingIgnoreCaseAndPriceLessThanEqualAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String destination, Double maxPrice, String airplaneType);
+    
+        List<Flight> findByDepartureDateBetweenAndOriginContainingIgnoreCaseAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String origin, String airplaneType);
+    
+        List<Flight> findByDepartureDateBetweenAndDestinationContainingIgnoreCaseAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String destination, String airplaneType);
+    
+        List<Flight> findByDepartureDateBetweenAndPriceLessThanEqualAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, Double maxPrice, String airplaneType);
+    
+        List<Flight> findByDepartureDateBetweenAndAirplaneType(
+                LocalDate startDate, LocalDate endDate, String airplaneType);
+
     List<Flight> findByDepartureDateBetween(
             LocalDate startDate, LocalDate endDate);
 }
