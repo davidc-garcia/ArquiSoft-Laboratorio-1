@@ -1,0 +1,91 @@
+[
+    {
+      "origin": "New York",
+      "destination": "Paris",
+      "date": "2024-09-03",
+      "price": 450,
+      "flightType": "International",
+      "aircraftType": "Boeing 777"
+    },
+    {
+      "origin": "Los Angeles",
+      "destination": "Tokyo",
+      "date": "2024-09-10",
+      "price": 800,
+      "flightType": "International",
+      "aircraftType": "Airbus A380"
+    },
+    {
+      "origin": "London",
+      "destination": "Rome",
+      "date": "2024-09-15",
+      "price": 300,
+      "flightType": "International",
+      "aircraftType": "Boeing 737"
+    },
+    {
+      "origin": "Berlin",
+      "destination": "New York",
+      "date": "2024-09-18",
+      "price": 600,
+      "flightType": "International",
+      "aircraftType": "Airbus A350"
+    },
+    {
+      "origin": "Sydney",
+      "destination": "Dubai",
+      "date": "2024-09-21",
+      "price": 700,
+      "flightType": "International",
+      "aircraftType": "Boeing 787"
+    },
+    {
+      "origin": "Toronto",
+      "destination": "Miami",
+      "date": "2024-09-25",
+      "price": 250,
+      "flightType": "Domestic",
+      "aircraftType": "Embraer E190"
+    },
+    {
+      "origin": "Mexico City",
+      "destination": "Buenos Aires",
+      "date": "2024-09-28",
+      "price": 550,
+      "flightType": "International",
+      "aircraftType": "Boeing 767"
+    },
+    {
+      "origin": "Mumbai",
+      "destination": "Cape Town",
+      "date": "2024-10-02",
+      "price": 900,
+      "flightType": "International",
+      "aircraftType": "Airbus A330"
+    },
+    {
+      "origin": "Moscow",
+      "destination": "Istanbul",
+      "date": "2024-10-05",
+      "price": 400,
+      "flightType": "International",
+      "aircraftType": "Boeing 737"
+    },
+    {
+      "origin": "Rio de Janeiro",
+      "destination": "Lima",
+      "date": "2024-10-08",
+      "price": 350,
+      "flightType": "International",
+      "aircraftType": "Airbus A320"
+    },
+    {
+      "origin": "Singapore",
+      "destination": "Bangkok",
+      "date": "2024-10-12",
+      "price": 450,
+      "flightType": "International",
+      "aircraftType": "Boeing 787"
+    }
+  ]
+  
