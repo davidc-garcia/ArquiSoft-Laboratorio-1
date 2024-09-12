@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import './App.css';  
-import data from './data/data.json'; 
+import './App.css';
 
 const FlightSearch = () => {
   const [startDate, setStartDate] = useState("");
@@ -15,37 +14,35 @@ const FlightSearch = () => {
   const [flightType, setFlightType] = useState("");
   const [filterByAircraftType, setFilterByAircraftType] = useState(false);
   const [aircraftType, setAircraftType] = useState("");
+  const [flights, setFlights] = useState([]);
 
-  const handleSearch = () => {
-    let filteredFlights = data;
-
-    if (startDate && endDate) {
-      filteredFlights = filteredFlights.filter(flight =>
-        new Date(flight.date) >= new Date(startDate) && new Date(flight.date) <= new Date(endDate)
-      );
-    }
+  const handleSearch = async () => {
+    let url = `http://localhost:8080/api/flights/search?startDate=${startDate}&endDate=${endDate}`;
 
     if (filterByOrigin && origin) {
-      filteredFlights = filteredFlights.filter(flight => flight.origin.toLowerCase().includes(origin.toLowerCase()));
+      url += `&origin=${origin}`;
     }
-
     if (filterByDestination && destination) {
-      filteredFlights = filteredFlights.filter(flight => flight.destination.toLowerCase().includes(destination.toLowerCase()));
+      url += `&destination=${destination}`;
     }
-
     if (filterByMaxPrice && maxPrice) {
-      filteredFlights = filteredFlights.filter(flight => flight.price <= parseFloat(maxPrice));
+      url += `&maxPrice=${maxPrice}`;
     }
-
     if (filterByFlightType && flightType) {
-      filteredFlights = filteredFlights.filter(flight => flight.flightType.toLowerCase() === flightType.toLowerCase());
+      url += `&flightType=${flightType}`;
     }
-
     if (filterByAircraftType && aircraftType) {
-      filteredFlights = filteredFlights.filter(flight => flight.aircraftType.toLowerCase().includes(aircraftType.toLowerCase()));
+      url += `&airplaneType=${aircraftType}`;
     }
 
-    return filteredFlights;
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setFlights(data);
+      console.log(flights) //Para quitar
+    } catch (error) {
+      console.error("Error fetching flights:", error);
+    }
   };
 
   return (
@@ -101,23 +98,25 @@ const FlightSearch = () => {
         <table className="table">
           <thead>
             <tr>
+              <th>Departure Date</th>
+              <th>Arrival Date</th>
               <th>Origin</th>
               <th>Destination</th>
-              <th>Date</th>
               <th>Price</th>
               <th>Flight Type</th>
               <th>Aircraft Type</th>
             </tr>
           </thead>
           <tbody>
-            {handleSearch().map((flight, index) => (
+            {flights.map((flight, index) => (
               <tr key={index}>
+                <td>{flight.departureDate}</td>
+                <td>{flight.arrivalDate}</td>
                 <td>{flight.origin}</td>
                 <td>{flight.destination}</td>
-                <td>{flight.date}</td>
                 <td>${flight.price.toFixed(2)}</td>
                 <td>{flight.flightType}</td>
-                <td>{flight.aircraftType}</td>
+                <td>{flight.airplaneType}</td>
               </tr>
             ))}
           </tbody>
