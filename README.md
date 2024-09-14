@@ -114,4 +114,4 @@ Se cumplieron los objetivos del proyecto, implementando una arquitectura MVC en 
 
 ## Informe detallado
 
-Para ver el informe con más detalle, dirigirse al siguiente enlace `https://docs.google.com/document/d/1YqaTyf1pW71990yETQUT6dtIaWaMVT1FzYRJCzxiEPw/edit?usp=sharing`
+Para ver el informe con más detalle, dirigirse al siguiente enlace (https://docs.google.com/document/d/1YqaTyf1pW71990yETQUT6dtIaWaMVT1FzYRJCzxiEPw/edit?usp=sharing)
