@@ -111,3 +111,7 @@ La arquitectura del frontend sigue un enfoque basado en componentes utilizando R
 ## Conclusiones
 
 Se cumplieron los objetivos del proyecto, implementando una arquitectura MVC en el backend y una interfaz intuitiva en el frontend. La integración con la API REST y las nuevas funcionalidades añadidas mejoraron la búsqueda de vuelos.
+
+## Informe detallado
+
+Para ver el informe con más detalle, dirigirse al siguiente enlace `https://docs.google.com/document/d/1YqaTyf1pW71990yETQUT6dtIaWaMVT1FzYRJCzxiEPw/edit?usp=sharing`
